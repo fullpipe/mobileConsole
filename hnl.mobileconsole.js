@@ -500,7 +500,7 @@
           console[method] = function () {
             if (arguments[0] == null) { arguments[0] = 'null'; }
             _preLogger.call(mc, method, arguments);
-            window.originalConsole[method].apply(console, arguments);
+            window.originalConsole[method].apply(window, arguments);
           }
         }
       }
